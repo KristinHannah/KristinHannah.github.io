@@ -1,11 +1,11 @@
 # Site settings
 author: Kristin Kraemer
-title: 
+title: KK's Adventures in Code
 header-img: img/home-bg.png
 email: kristinhannahk@gmail.com
 copyright_name: Kristin Kraemer
 description: > # this means to ignore newlines until "baseurl:"
-  
+  What I've Learned
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  KristinHannah
