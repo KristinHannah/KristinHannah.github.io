@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Using Scopes to Find the Perfect Dog for You"
-date:       2019-11-09 17:27:14 +0000
+date:       2019-11-09 12:27:14 -0500
 permalink:  using_scopes_to_find_the_perfect_dog_for_you
 ---
 
@@ -15,8 +15,27 @@ I saved the preferences for the users on a separate preferences table/model, tha
 ```
 class Preferences < ApplicationRecord 
 
-scope :dog, -> { where.not(dog_breed_id: nil) }
+     scope :dog, -> { where.not(dog_breed_id: nil) }
 
 end 
 
 ```
+
+Since my preferences table has information for both users and dog breeds, I wanted to make sure I was only getting dog breeds so users wouldn’t be matched with other users. Now, when I call “Preferences.dog”, I’ll get an ActiveRecord::Relation containing only the rows from the table that contain a dog_breed_id. 
+
+
+**Scopes can accept arguments.** You can feed an argument into a scope. For finding matches, this feature is very important. Users can say what size dog they prefer. Scopes will allow us to get only rows for the Preferences table based on the users response. 
+
+```
+class Preferences < ApplicationRecord 
+
+	scope :dog, -> { where.not(dog_breed_id: nil) }
+scope :by_size, -> (answer) { where(:size => answer)}
+
+end 
+
+```
+
+Now if I call “Preferences.by_size(“small”)”, I’ll get only rows that have the “small” for their size. 
+But didn’t I only want dog breed ids? Good news! Scopes are also chainable. So now I can call “Preferences.dog.by_size(“small”)”, and now I’m only getting rows that have small dog breeds!
+
