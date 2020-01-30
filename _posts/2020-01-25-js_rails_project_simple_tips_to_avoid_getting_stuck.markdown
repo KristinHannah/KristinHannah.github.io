@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "JS Rails Project: Simple Tips to Avoid Getting Stuck "
-date:       2020-01-25 21:50:54 +0000
+date:       2020-01-25 16:50:55 -0500
 permalink:  js_rails_project_simple_tips_to_avoid_getting_stuck
 ---
 
 
 Starting out the JavaScript and Rails Project I was definitely intimidated. Since starting the JavaScript sections, things just haven’t clicked for me as well as they had for Rails and Ruby. I started my project by following along with a past tutorial recording. It was helpful for setting up my project. Once I reached the end of the recording, I was on my own, and again faced with that feeling of ‘so what do I do now?’ 
 
-	I knew what I wanted my project to have, so I started working on it out, piece by piece. I made progress and felt pretty good. But there were a few things that I got stuck on. It seems almost inevitable when working a project that something doesn’t work as expected. When things stop working, it can be easy to start getting frustrated. Here’s some of my tips to avoid frustration, and a place where I got stuck and how I worked through it:
+I knew what I wanted my project to have, so I started working on it out, piece by piece. I made progress and felt pretty good. But there were a few things that I got stuck on. It seems almost inevitable when working a project that something doesn’t work as expected. When things stop working, it can be easy to start getting frustrated. Here’s some of my tips to avoid frustration, and a place where I got stuck and how I worked through it:
 
 ## Tip number 1: Always Test What You Just Did. 
 This was a take away from the tutorial I watched and probably my favorite one. Pretty much the entire time I was working on this project I had my rails server running and was looking at the index file on my google chrome browser. Sometimes when I moved something, or added something, or deleted something it had unexpected consequences. All of a sudden none of the information that was being rendered before was coming up, or something else would seem to go wrong. I was glad that I was checking things so frequently, because it was infinitely easier to determine where the issue lied. I could comment out what I just wrote, and check that things worked like they had before. 
